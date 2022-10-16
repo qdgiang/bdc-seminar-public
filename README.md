@@ -30,7 +30,7 @@ uvicorn main:app --reload
 ```
 uvicorn main:app --reload
 ```
-- Check out the new API at `localhost:8000/docs
+- Check out the new API at `localhost:8000/docs`
 - Try sending an image in the `test-images` folder to the API at `/image2image` and see what happens.
 # Docker Exercise 1
 - Pull the image `qdgiang/seminar-ex1`
@@ -43,6 +43,11 @@ uvicorn main:app --reload
 # Docker Exercise 2
 - Pull the image `qdgiang/seminar-ex2`
 - Run the image **in foreground mode**, and read what is printed on the terminal
-- 
+- Can you change the environment variable with an updated `docker run` command this time?
+# Docker Exercise 3
+- Navigate to the folder `docker-3`
+- Build the image using `docker build` command. Remember to set your own name for the image using the `-t` flag
+- Run your build image in detached mode. Remember to **map the port** from your computer to inside your container using the `-p` flag. Hint: The FastAPI server **inside the container** is opened at port `8000`
+- Check out the API at `localhost:PORT_THAT_YOU_JUST_MAP/docs`. If you can see the UI, congrats!
 
 
