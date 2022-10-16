@@ -49,5 +49,6 @@ uvicorn main:app --reload
 - Build the image using `docker build` command. Remember to set your own name for the image using the `-t` flag
 - Run your build image in detached mode. Remember to **map the port** from your computer to inside your container using the `-p` flag. Hint: The FastAPI server **inside the container** is opened at port `8000`
 - Check out the API at `localhost:PORT_THAT_YOU_JUST_MAP/docs`. If you can see the UI, congrats!
+# Docker Exercise 4
 
 
