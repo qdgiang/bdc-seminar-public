@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+        background-image: url('https://lh5.googleusercontent.com/MU6dAAhyOHIlpCQGvLICJlXdyDS7NCUQ7IisYgoU2BwM76ReMa9a0n_t1deaNqv8s-M=w2400');
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="row justify-content-center">FastAPI Demo</h1><br>
+        <h2 class="text-justify">How to square a number</h2>
+        <input class="block" type="number" placeholder="Input a number" id="input-number">
+        <button class="btn btn-primary" onclick="calculate()">Submit</button><br><br>
+        <h1 id="result">Result: </h1>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        function calculate() {
+            let val = $('#input-number').val();
+            $.ajax({
+                url: `/square/${val}`,
+                type: 'GET',
+                success: function(data) {
+                    $('#result').text(`Result: ${data.result}`)
+                },
+            })
+        }
+    </script>
+</body>
+</html> 
