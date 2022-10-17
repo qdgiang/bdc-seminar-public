@@ -45,7 +45,8 @@ uvicorn main:app --reload
 - Run the image **in foreground mode**, and read what is printed on the terminal
 - Can you change the environment variable with an updated `docker run` command this time?
 # Docker Exercise 3
-- Navigate to the folder `docker-3`
+- Navigate to the folder `fastapi-1`
+- Update the Dockerfile to build the image for the server
 - Build the image using `docker build` command. Remember to set your own name for the image using the `-t` flag
 - Run your build image in detached mode. Remember to **map the port** from your computer to inside your container using the `-p` flag. Hint: The FastAPI server **inside the container** is opened at port `8000`
 - Check out the API at `localhost:PORT_THAT_YOU_JUST_MAP/docs`. If you can see the UI, congrats!
