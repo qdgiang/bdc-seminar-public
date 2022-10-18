@@ -38,6 +38,11 @@ uvicorn main:app --reload
 uvicorn main:app --reload
 ```
 - Check out the new API at `localhost:8000/docs`
+- We have a secret message! 
+```
+VGhpcyBpcyBkZWZpbml0ZWx5IG5vdCBteSBwYXNzd29yZA==
+```
+Try calling the decoder at `/secretdecoder` from `curl`, Postman or FastAPI's Swagger UI. What's the message?
 - Try sending an image in the `test-images` folder to the API at `/image2image` and see what happens.
 # Docker Exercise 1
 - Pull the image `qdgiang/seminar-ex1`
@@ -55,8 +60,12 @@ uvicorn main:app --reload
 - Navigate to the folder `fastapi-1`
 - Update the Dockerfile to build the image for the server
 - Build the image using `docker build` command. Remember to set your own name for the image using the `-t` flag
-- Run your build image in detached mode. Remember to **map the port** from your computer to inside your container using the `-p` flag. Hint: The FastAPI server **inside the container** is opened at the port that you defined in the ENTRYPOINT command`
+- Run your build image in detached mode. Remember to **map the port** from your computer to inside your container using the `-p` flag. Hint: The FastAPI server **inside the container** is opened at the port that you defined in the ENTRYPOINT command.
 - Check out the API at `localhost:PORT_THAT_YOU_JUST_MAP/docs`. If you can see the UI, congrats!
 # Docker Exercise 4
+- Navigate to the folder `docker-4`
+- There's no need to do anything this time :). Just run `docker compose up --build` and enjoy the result.
+- Open the web at localhost
+- Try sending the same secret message from FastAPI Exercise 3. Can you see communication between different parts of the website? If yes, congrats, you have sucessfully composed the frontend and backend service into a working website.
 
 
