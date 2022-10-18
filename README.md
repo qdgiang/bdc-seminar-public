@@ -12,6 +12,13 @@
 uvicorn main:app --reload
 ```
 - Check out the API at `localhost:8000/docs`
+- You can also use `curl` command to test your API. For example, to get the square value of 591, run
+```
+curl -X 'GET' \
+  'http://localhost:8000/square/591' \
+  -H 'accept: application/json'
+```
+- [Postman](https://www.postman.com) is also an execllent option to test your API.
 # FastAPI Exercise 2
 - Navigate to folder `fastapi-2`
 - Download another package: `Jinja`
