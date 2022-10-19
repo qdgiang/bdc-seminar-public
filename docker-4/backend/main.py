@@ -58,7 +58,7 @@ def root():
     return "This is the root URL of the API."
 
 ## receive a query as a base64 encoded string. return the decoded string
-@app.get("/api/base64decoder/{query}/")
+@app.get("/api/base64decoder/{query}")
 def base64decoder(query: str):
     return {
         "message": base64.b64decode(query),
