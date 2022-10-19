@@ -68,4 +68,10 @@ Try calling the decoder at `/secretdecoder` from `curl`, Postman or FastAPI's Sw
 - Open the web at localhost
 - Try sending the same secret message from FastAPI Exercise 3. Can you see communication between different parts of the website? If yes, congrats, you have sucessfully composed the frontend and backend service into a working website.
 
+# Bonus
+- Exec into the `docker-testing` container. Can you ping the `docker-fastapi` container from there?
+- Try `curl`-ing from `docker-testing`. What's wrong?
+- When you fix the error above, can you `curl` using the same `curl` command from FastAPI Exercise 1? Why or why not?
+- Update your `curl` command. Note that the backend server is now openning at port `8080` (so make sure to always read the code 🐧).
+- If you update it right, you will be able to `curl` into the backend container from the testing container now, meaning the components inside our website are worling properly and connected to each other.
 
