@@ -4,7 +4,7 @@
 
 # Copy the current directory contents into the container at /fastapi-server
 
-# Install the two packages that you did in fastapi exercise 1: fastapi and uvicorn[standard]
+# Install the two packages that you did in fastapi exercise 1: fastapi and uvicorn
 
 # Run the server when the container launches with the ENTRYPOINT command
 # Note: Launch the server at the host 0.0.0.0 so that outside request from your computer can reach the container
