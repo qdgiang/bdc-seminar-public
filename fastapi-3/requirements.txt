@@ -1,6 +1,6 @@
 # YOLOv5 requirements
 # Usage: pip install -r requirements.txt
-
+python-multipart
 # Base ----------------------------------------
 matplotlib>=3.2.2
 numpy>=1.18.5
