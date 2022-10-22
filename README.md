@@ -47,7 +47,7 @@ Try calling the decoder at `/secretdecoder` from `curl`, Postman or FastAPI's Sw
 # Docker Exercise 1
 - Pull the image `qdgiang/seminar-ex1`
 - Run the image **in detached mode**
-- Exec inside the image with the command `/bin/sh`
+- Exec inside the running container with the command `/bin/sh`
 - Read the content of the file `hello.txt` there
 - Exit from inside the container
 - Stop the running container
